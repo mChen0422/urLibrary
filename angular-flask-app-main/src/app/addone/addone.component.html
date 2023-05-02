@@ -1,0 +1,33 @@
+
+<div class="heroess">
+    <h2>ADD NEW BOOK  </h2>
+
+    <div [ngStyle]="{'display':'flex','flex-wrap': 'wrap','justify-content': 'space-evenly','flex-direction': 'column','align-content': 'center'}">
+      <label [ngStyle]="{'width':'300px'}" >ISBN: </label>
+      <input [ngStyle]="{'width':'300px'}"  #isbn />
+      <label [ngStyle]="{'width':'300px'}" >Book Title: </label>
+      <input [ngStyle]="{'width':'300px'}"  #title />
+      <label [ngStyle]="{'width':'300px'}" >Book Author: </label>
+      <input [ngStyle]="{'width':'300px'}"  #auth />
+      <label [ngStyle]="{'width':'300px'}" >Year Of Publication: </label>
+      <input [ngStyle]="{'width':'300px'}"  #year />
+      <label [ngStyle]="{'width':'300px'}" >Publisher: </label>
+      <input [ngStyle]="{'width':'300px'}"  #pub />
+      <label [ngStyle]="{'width':'300px'}" >Image URL: </label>
+      <input [ngStyle]="{'width':'300px'}"  #urls />
+      <label [ngStyle]="{'width':'300px'}" >Rating: </label>
+      <input [ngStyle]="{'width':'300px'}"  #rating />
+      <label [ngStyle]="{'width':'300px'}" >Reader Number: </label>
+      <input [ngStyle]="{'width':'300px'}"  #count />
+
+
+
+    </div>
+  <div [ngStyle]="{'display':'flex','justify-content': 'center'}">
+        <button type="button" class="add-button" (click)="add(isbn.value,title.value,auth.value,year.value,pub.value,urls.value,rating.value,count.value); isbn.value='' ;title.value='';auth.value='';year.value='';pub.value='';urls.value='';rating.value='';count.value=''">
+          ADD BOOK
+        </button>
+  </div>
+
+</div>
+

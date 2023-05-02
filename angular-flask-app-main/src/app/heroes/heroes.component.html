@@ -1,0 +1,24 @@
+
+<div class="heroess">
+    <h2>TOP READING LIST </h2>
+    <div [ngStyle]="{'display':'flex','justify-content': 'center'}">
+    <ul class="heroes">
+        <li *ngFor="let hero of ratinglist">
+                <a routerLink="/book_detail/{{hero._id}}">
+                    <span class="badge"><<{{hero.Book_Title}}>></span>
+                    <span class="name">Rating:&nbsp; {{hero.rating}}</span>
+                </a>
+        </li>
+    </ul>
+    </div>
+<!--    <div>-->
+<!--        <label for="new-hero">Hero name: </label>-->
+<!--        <input id="new-hero" #heroName />-->
+
+
+<!--        <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">-->
+<!--          Add hero-->
+<!--        </button>-->
+<!--    </div>-->
+</div>
+

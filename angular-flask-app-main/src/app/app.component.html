@@ -1,0 +1,17 @@
+<nav>
+  <a routerLink="">HOME</a>
+  <a routerLink="top-list">TOP LIST</a>
+  <a routerLink="addone">ADD MORE</a>
+  <a routerLink="search">SEARCH BOOKS</a>
+
+</nav>
+
+<div [ngStyle]="{'text-align':' center','font-size':'28px','font-weight':'bold'}">
+  <p>{{title | uppercase}}</p>
+</div>
+<div [ngStyle]="{'text-align':' center','font-size':'28px','font-weight':'bold'}">
+  <img src="assets/rcy.png" alt=""/>
+</div>
+
+<router-outlet></router-outlet>
+<!--<app-messages></app-messages>-->

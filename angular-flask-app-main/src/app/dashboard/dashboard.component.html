@@ -1,0 +1,15 @@
+<h2>RANDOM RECOMMENDATION LIST</h2>
+<div class="heroes-menu">
+<!--  <a *ngFor="let hero of heroes" routerLink="/detail/{{hero._id}}">-->
+<!--    {{hero._id}}-->
+<!--  </a>-->
+  <div [ngStyle]="{'display':'flex','width':'1300px','flex-wrap': 'wrap','justify-content': 'space-evenly'}">
+  <div *ngFor="let hero of heroes" [ngStyle]="{'display':'flex','width':'400px','height':'520px','flex-wrap': 'wrap','justify-content': 'center','text-alig':'center','align-content': 'flex-start','margin-bottom':'30px','background-color':'#ececec'}" >
+    <img routerLink="/book_detail/{{hero._id}}" src="{{hero.Image_URL_L}}" alt="" [ngStyle]="{'width':'300px','height':'400px','margin-top':'10px'}">
+    <a routerLink="/book_detail/{{hero._id}}">
+      《{{hero.Book_Title}}》
+    </a>
+
+  </div>
+  </div>
+</div>

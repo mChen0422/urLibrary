@@ -1,0 +1,32 @@
+<div class="dispaly" *ngIf="hero">
+
+    <h2> BOOK DETAILS</h2>
+    <div [ngStyle]="{'display':'flex','width':'1300px','flex-wrap': 'wrap','justify-content': 'space-evenly'}">
+      <img src="{{hero.Image_URL_L}}" alt="" [ngStyle]="{'width':'300px','height':'400px','margin-top':'10px'}">
+      <div [ngStyle]="{'display':'flex','width':'500px','flex-direction': 'column'}">
+        <div [ngStyle]="{'color':'gray','font-size':'24px','margin':'10px'}"><span [ngStyle]="{'color':'#333333','font-size':'24px'}">ISBN: </span>&nbsp;   {{hero._id}}</div>
+        <div [ngStyle]="{'color':'gray','font-size':'24px','margin':'10px'}"><span [ngStyle]="{'color':'#333333','font-size':'24px'}">Book Title: </span> &nbsp;   {{hero.Book_Title}}</div>
+        <div [ngStyle]="{'color':'gray','font-size':'24px','margin':'10px'}"><span [ngStyle]="{'color':'#333333','font-size':'24px'}">Book Author: </span> &nbsp;   {{hero.Book_Author}}</div>
+        <div [ngStyle]="{'color':'gray','font-size':'24px','margin':'10px'}"><span [ngStyle]="{'color':'#333333','font-size':'24px'}">Year Of Publication: </span>&nbsp;   {{hero.Year_Of_Publication}}</div>
+        <div [ngStyle]="{'color':'gray','font-size':'24px','margin':'10px'}"><span [ngStyle]="{'color':'#333333','font-size':'24px'}">Publisher: </span>&nbsp;    {{hero.Publisher}}</div>
+        <div [ngStyle]="{'color':'gray','font-size':'24px','margin':'10px'}"><span [ngStyle]="{'color':'#333333','font-size':'24px'}">Rating: </span> &nbsp;   {{hero.rating}}</div>
+        <div [ngStyle]="{'color':'gray','font-size':'24px','margin':'10px'}"><span [ngStyle]="{'color':'#333333','font-size':'24px'}">Reader Number: </span> &nbsp;   {{hero.count}}</div>
+        <br/>
+        <div class="update-name">
+          <label>New Book Rating:&nbsp;&nbsp;</label>
+          <input [(ngModel)]="hero.rating" placeholder="score">
+        </div>
+        <button (click)="save()">Update Book Rating</button>
+        <button [ngStyle]="{'color':'red'}" (click)="delete()">DELETE THIS BOOK</button>
+      </div>
+
+    </div>
+
+<!--    <div class="update-name">-->
+<!--        <label>Enter name to update:</label>-->
+<!--        <input [(ngModel)]="hero.name" placeholder="name">-->
+<!--    </div>-->
+<!--    <button (click)="save()">update name</button>-->
+</div>
+
+
